@@ -19,7 +19,7 @@
 
 extern "C" {
     #include "ti/drivers/net/wifi/simplelink.h"
-    #include "ti/drivers/net/wifi/sys/socket.h"
+    #include "ti/drivers/net/wifi/sl_socket.h"
     #include "wl_definitions.h"
 }
 

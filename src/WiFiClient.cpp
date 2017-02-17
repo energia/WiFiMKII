@@ -34,7 +34,7 @@
 
 extern "C" {
   #include "wl_definitions.h"
-  #include "ti/drivers/net/wifi/sys/socket.h"
+  #include "ti/drivers/net/wifi/sl_socket.h"
 }
 
 #include "WiFi.h"
@@ -323,8 +323,6 @@ int WiFiClient::useRootCA(void)
 }
  */
 
-//--tested, working--//
-//--client and server side--//
 size_t WiFiClient::write(uint8_t b)
 {
     //
@@ -333,15 +331,13 @@ size_t WiFiClient::write(uint8_t b)
     if (_socketIndex == NO_SOCKET_AVAIL) {
         return 0;
     }
-    
+
     //
     //write the single byte to the server the client is connected to
     //
     return write(&b, 1);
 }
 
-//--tested, working--//
-//--client and server side--//
 size_t WiFiClient::write(const uint8_t *buffer, size_t size)
 {
     //
@@ -378,8 +374,6 @@ size_t WiFiClient::write(const uint8_t *buffer, size_t size)
     }
 }
 
-//--tested, working--//
-//--client and server side--//
 int WiFiClient::available()
 {
     //
@@ -443,7 +437,6 @@ int WiFiClient::available()
     return bytesLeft;
 }
 
-//--tested, working--//
 int WiFiClient::read()
 {
     //
@@ -457,7 +450,6 @@ int WiFiClient::read()
     }
 }
 
-//--tested, working--//
 int WiFiClient::read(uint8_t* buf, size_t size)
 {
     //
@@ -477,7 +469,6 @@ int WiFiClient::read(uint8_t* buf, size_t size)
     return len;
 }
 
-//--tested, working--//
 int WiFiClient::peek()
 {
     //
@@ -490,7 +481,6 @@ int WiFiClient::peek()
     }
 }
 
-//--tested, working--//
 void WiFiClient::flush()
 {
     //
@@ -501,7 +491,6 @@ void WiFiClient::flush()
     rx_currentIndex = 0;
 }
 
-//--tested, working--//
 void WiFiClient::stop()
 {
     //
@@ -556,7 +545,6 @@ uint8_t WiFiClient::status()
     return true;
 }
 
-//--tested, working--//
 WiFiClient::operator bool()
 {
     //
