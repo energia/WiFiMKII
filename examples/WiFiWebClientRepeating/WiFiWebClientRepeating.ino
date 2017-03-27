@@ -28,9 +28,9 @@
 #include <WiFi.h>
 
 // your network name also called SSID
-char ssid[] = "ThingsNet";
+char ssid[] = "energia";
 // your network password
-char password[] = "Simpl3l!nk";
+char password[] = "launchpad";
 
 // Initialize the Wifi client library
 WiFiClient client;
