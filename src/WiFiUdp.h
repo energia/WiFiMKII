@@ -20,7 +20,7 @@
 #ifndef wifiudp_h
 #define wifiudp_h
 
-#include "WiFi.h"
+#include "WiFiMKII.h"
 #include <Stream.h>
 
 //!!definitions from CC3000 library. Make sure these are right !!//

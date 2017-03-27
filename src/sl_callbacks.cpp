@@ -1,6 +1,6 @@
 #include "sl_callbacks.h"
 
-#include "WiFi.h"
+#include "WiFiMKII.h"
 #include <Energia.h>
 
 

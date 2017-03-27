@@ -33,7 +33,7 @@
 #define DEBUG
 
 #include <Energia.h>
-#include "WiFi.h"
+#include "WiFiMKII.h"
 //#include "utility/wl_definitions.h"
 
 extern "C" {

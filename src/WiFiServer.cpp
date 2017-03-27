@@ -26,7 +26,7 @@ extern "C" {
     #include "ti/drivers/net/wifi/netapp.h"
 }
 
-#include "WiFi.h"
+#include "WiFiMKII.h"
 #include "WiFiClient.h"
 #include "WiFiServer.h"
 

@@ -25,7 +25,7 @@ extern "C" {
 
 #include <string.h>
 
-#include "WiFi.h"
+#include "WiFiMKII.h"
 #include "WiFiUdp.h"
 
 //--tested, working--//

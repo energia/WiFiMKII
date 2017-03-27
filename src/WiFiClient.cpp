@@ -37,7 +37,7 @@ extern "C" {
   #include "ti/drivers/net/wifi/sl_socket.h"
 }
 
-#include "WiFi.h"
+#include "WiFiMKII.h"
 #include "WiFiClient.h"
 #include "WiFiServer.h"
 
@@ -355,7 +355,7 @@ size_t WiFiClient::write(const uint8_t *buffer, size_t size)
     // Flow control signal; perform a paced-retry.
     while (iRet == SL_ERROR_BSD_EAGAIN) {
         delay(10);
-#ifndef SL_PLATFORM_MULTI_THREADED$
+#ifndef SL_PLATFORM_MULTI_THREADED
         /* HACK: required in nonos builds, otherwise we hang in this loop */
         sl_Task(NULL);
 #endif
